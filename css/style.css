@@ -87,14 +87,14 @@ img {
 
 /* Nav */
 
-.main-header {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 .top-line {
     display: flex;
     justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 24px;
+}
+.top-line-bg {
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .nav {
     display: flex;
@@ -173,8 +173,7 @@ img {
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.04em;
-    min-width: 170px;
-    height: 50px;
+    padding: 16px 32px;
     color: #ffffff;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -217,7 +216,7 @@ img {
 }
 .section-title {
     margin: 0;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
     font-weight: 500;
     font-size: 36px;
     line-height: 1.1;
@@ -334,17 +333,24 @@ footer {
     padding-top: 0;
 }
 .project-cards-list {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -48px;
-    margin-left: -24px;
 }
 .project-card {
     flex-basis: calccalc((100% - 48px)/3);
     margin-left: 24px;
     margin-top: 48px;
+    width: 360px;
+    background: #FFFFFF;
+    border: 0.5px solid var(--light-color);
+    border-top: none;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+.project-card:nth-child(3n + 1) {
+    margin-left: 0;
+}
+.project-card:nth-child(-n + 3) {
+    margin-top: 0;
 }
 .project-card:hover,
 .project-card:focus {
@@ -352,10 +358,10 @@ footer {
 }
 .card-content {
     padding: 32px 16px;
-    background: #FFFFFF;
+    /* background: #FFFFFF;
     border: 0.5px solid var(--light-color);
     border-top: none;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08); */
 }
 .card-hidden-text {
     display: none;
